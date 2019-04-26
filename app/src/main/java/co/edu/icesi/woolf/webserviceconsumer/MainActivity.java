@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         btn_getMaterias.setOnClickListener(v -> new Thread(()->{
             new ServiceManager.MateriasGET(responce -> runOnUiThread(()->{
                 txt_console.setText(responce);
-                Type tipo = new TypeToken<HashMap<String,Materia>>(){
+                Type tipo = new TypeToken<HashMap<String,Materia>>(){ 
 
                 }.getType();
                 Gson g = new Gson();
